@@ -118,7 +118,8 @@ public class FibonacciSeries
 
 		else if(fibArr[n] != -1)
 			return fibArr[n];
-		return recMemo(n - 1) + recMemo(n - 2);
+		fibArr[n] = recMemo(n - 1) + recMemo(n - 2);
+		return fibArr[n];
 	}
 
 	/**
